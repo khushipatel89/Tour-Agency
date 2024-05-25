@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Tour And Travel Agency">
+    <meta keyword="html,css,javascript,bootsrap">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+  <body>
+    <header>
+        <a href="#" class="brand">Hawa<span>yein</span></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+<br><br><br>
+    <section class="about">
+        <div class="container">
+          <div class="main-text">
+           <h1>About <span>Us</span></h1>
+          <h3></h3>
+          </div>
+          <div class="row" style="margin-top: 50px;">
+
+            <div class="col-md-6 py-3 py-md-0">
+              <div class="card">
+                <img src="https://media.cntraveler.com/photos/64d573b2f3e99758036e9535/16:9/w_2560%2Cc_limit/Travel-Agent-GettyImages-1399720393.jpg"alt="">
+
+               </div>
+           </div>
+
+            <div class="col-md-6 py-3 py-md-0">
+              <h2>How Travel Agency (HAWAYEIN) Work</h2>
+              <p>Our management team is active on various travel advisory boards and committees for travel organizations like ASTA, travel magazines (Afar, Travel+Leisure), major hotel brands, and airlines. We are engaged with our industry and our opinions continue to be sought across the broad spectrum of our industry. Meet our key Executive Team.>></p>
+             <button id="about-btn">Read More...</button>
+            </div>
+          </div>
+          </div>
+      </section>
+      <script type="text/javascript">
+        const menubtn=document.querySelector(".menu-btn");
+        const nevigation=document.querySelector(".navigation");
+
+        menubtn.addEventListener("click",()=>{
+            menubtn.classList.toggle("active");
+            nevigation.classList.toggle("active");
+        });
+
+        const btns=document.querySelectorAll(".nav-btn");
+        const slides=document.querySelectorAll(".video-slide");
+
+        var slidenav=function(manual){
+            btns.forEach((btn) =>{
+            btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) =>{
+            slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+        btns.forEach((btn,i) =>{
+            btn.addEventListener("click",() =>{
+                slidenav(i);
+            })
+        })
+    </script>
+
+<footer id="footer">
+  <h1>HAWA<span>YEIN</span></h1>
+  <p> Tour Travel Agency</p>
+  <div class="social-links">
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </div>
+  <div class="credit">
+    <p>Designed By ksp</p>
+  </div>
+  <div class="copyright">
+    <p>&copy;Copyright ksp. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    </body>
+    </html>

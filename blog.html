@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="Tour And Travel Agency">
+    <meta keyword="html,css,javascript,bootsrap">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+  <body>
+    <header>
+        <a href="#" class="brand">Hawa<span>yein</span></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="packages.html">Packages</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+<br><br><div class="main-text">
+    <h1>B<span>log</span></h1>
+   
+   </div>
+  <section class="blog">
+     
+      <div class="container">
+        
+        <div class="card">
+          <div class="card-header">
+            <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+          </div>
+          <div class="card-body">
+            <span class="tag tag-teal">Vehicle</span>
+            <h4>
+              Forest Ride 
+            </h4>
+            <p>
+              Unforgatable Memories
+            </p>
+            <div class="user">
+              <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+              <div class="user-info">
+                <h5>radha s.m</h5>
+                <small>2h ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
+          </div>
+          <div class="card-body">
+            <span class="tag tag-purple">Air-balloon</span>
+            <h4>
+              A hot air balloon
+            </h4>
+            <p>
+              Enjoyeble moments
+            </p>
+            <div class="user">
+              <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo" alt="user" />
+              <div class="user-info">
+                <h5>abhir m.n</h5>
+                <small>Yesterday</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
+          </div>
+          <div class="card-body">
+            <span class="tag tag-pink">City</span>
+            <h4>
+              Two month tour in PARIS
+            </h4>
+            <p>
+              Holidays memories
+            </p>
+            <div class="user">
+              <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo" alt="user" />
+              <div class="user-info">
+                <h5>kris m.r</h5>
+                <small>1w ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </section>
+      <script type="text/javascript">
+        const menubtn=document.querySelector(".menu-btn");
+        const nevigation=document.querySelector(".navigation");
+
+        menubtn.addEventListener("click",()=>{
+            menubtn.classList.toggle("active");
+            nevigation.classList.toggle("active");
+        });
+
+        const btns=document.querySelectorAll(".nav-btn");
+        const slides=document.querySelectorAll(".video-slide");
+
+        var slidenav=function(manual){
+            btns.forEach((btn) =>{
+            btn.classList.remove("active");
+            });
+
+            slides.forEach((slide) =>{
+            slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+        btns.forEach((btn,i) =>{
+            btn.addEventListener("click",() =>{
+                slidenav(i);
+            })
+        })
+    </script>
+
+<footer id="footer">
+  <h1>HAWA<span>YEIN</span></h1>
+  <p> Tour Travel Agency</p>
+  <div class="social-links">
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </div>
+  <div class="credit">
+    <p>Designed By ksp</p>
+  </div>
+  <div class="copyright">
+    <p>&copy;Copyright ksp. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    </body>
+    </html>
